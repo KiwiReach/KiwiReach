@@ -3,7 +3,12 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react"
+// Instead of importing all icons from lucide-react
+// import { Menu, X } from 'lucide-react'
+
+// Change to individual imports
+import Menu from "lucide-react/dist/esm/icons/menu"
+import X from "lucide-react/dist/esm/icons/x"
 import { Button } from "@/components/ui/button"
 
 export default function Navbar() {

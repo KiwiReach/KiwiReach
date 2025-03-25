@@ -1,9 +1,13 @@
+// Add this comment to make it a Server Component
+// (Next.js App Router components are Server Components by default)
+
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { ArrowRight } from "lucide-react"
 
+// Server Component doesn't need useState or event handlers
 export default function BlogPage() {
   return (
     <>

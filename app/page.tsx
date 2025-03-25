@@ -3,6 +3,16 @@ import Image from "next/image"
 import { ArrowRight, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import dynamic from "next/dynamic"
+
+// Instead of:
+// import ContactPage from './contact/page'
+
+// Use:
+const ContactPage = dynamic(() => import("./contact/page"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false, // If you don't need server-side rendering
+})
 
 export default function Home() {
   return (
