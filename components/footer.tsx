@@ -1,6 +1,3 @@
-import Link from "next/link"
-import { Instagram } from "lucide-react"
-
 export default function Footer() {
   return (
     <footer className="border-t bg-background">
@@ -11,37 +8,6 @@ export default function Footer() {
             <p className="text-muted-foreground">
               We help businesses grow through effective social media marketing strategies.
             </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-                  Blog
-                </Link>
-              </li>
-            </ul>
           </div>
 
           <div>
@@ -66,7 +32,6 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                 >
-                  <Instagram size={16} />
                   <span>@kiwi.reach</span>
                 </a>
               </li>

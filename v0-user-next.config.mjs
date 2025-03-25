@@ -6,7 +6,7 @@ const nextConfig = {
   // Add these optimizations
   swcMinify: true,
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: true, // Remove all console statements
   },
   experimental: {
     // Disable features you don't need
@@ -20,16 +20,27 @@ const nextConfig = {
       Object.assign(config.resolve.alias, {
         'react-day-picker': false,
         'recharts': false,
-        // Add other large libraries you don't actually use
+        'sonner': false,
+        'vaul': false,
+        'embla-carousel-react': false,
+        // Add more unused libraries
       })
+      
+      // Remove moment.js locales
+      config.plugins.push(
+        new config.webpack.IgnorePlugin({
+          resourceRegExp: /^\.\/locale$/,
+          contextRegExp: /moment$/,
+        })
+      );
     }
     
-    // Add a rule to handle large files
+    // More aggressive chunk splitting
     config.optimization.splitChunks = {
       chunks: 'all',
-      maxInitialRequests: 25,
-      minSize: 20000,
-      maxSize: 1000000, // 1MB max chunk size
+      maxInitialRequests: 30,
+      minSize: 10000,
+      maxSize: 500000, // 500KB max chunk size (more aggressive)
       cacheGroups: {
         default: false,
         vendors: false,

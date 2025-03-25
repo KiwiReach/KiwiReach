@@ -1,8 +1,8 @@
 import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Placeholder } from "@/components/placeholder"
+import { CheckCircle, ArrowRight } from "lucide-react"
 
 // Remove the dynamic import that was causing the error
 // We don't actually need to import the contact page here
@@ -38,13 +38,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center">
-              <Image
-                src="/placeholder.svg?height=500&width=500"
-                alt="Social Media Marketing"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover"
-              />
+              <Placeholder width={500} height={500} text="Social Media Marketing" />
             </div>
           </div>
         </div>
@@ -181,13 +175,7 @@ export default function Home() {
           </div>
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:gap-12 mt-8">
             <Card className="overflow-hidden">
-              <Image
-                src="/placeholder.svg?height=200&width=400"
-                alt="Case Study: Local Cafe"
-                width={400}
-                height={200}
-                className="w-full object-cover"
-              />
+              <Placeholder width={400} height={200} text="Case Study: Local Cafe" className="w-full object-cover" />
               <CardContent className="p-6 space-y-4">
                 <h3 className="text-xl font-bold">Local Cafe Increases Foot Traffic by 45%</h3>
                 <p className="text-muted-foreground">
@@ -200,11 +188,10 @@ export default function Home() {
               </CardContent>
             </Card>
             <Card className="overflow-hidden">
-              <Image
-                src="/placeholder.svg?height=200&width=400"
-                alt="Case Study: E-commerce Store"
+              <Placeholder
                 width={400}
                 height={200}
+                text="Case Study: E-commerce Store"
                 className="w-full object-cover"
               />
               <CardContent className="p-6 space-y-4">

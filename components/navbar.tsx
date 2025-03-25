@@ -1,11 +1,8 @@
+// Simplified navbar
 "use client"
 
 import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
-// Import specific icons instead of the whole library
-import Menu from "lucide-react/dist/esm/icons/menu"
-import X from "lucide-react/dist/esm/icons/x"
 import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
@@ -15,7 +12,6 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <Image src="/placeholder.svg?height=32&width=32" alt="Kiwi Reach Logo" width={32} height={32} />
           <span className="text-xl font-bold text-primary">Kiwi Reach</span>
         </Link>
 
@@ -41,7 +37,7 @@ export default function Navbar() {
         </nav>
 
         <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? "✕" : "☰"}
         </button>
       </div>
 
