@@ -1,9 +1,9 @@
 import Image from "next/image"
 
 // Create a wrapper component for optimized images
-export function OptimizedImage({ src, alt, width, height, ...props }) {
+export function OptimizedImage({ src, alt, width, height, ...props }: any) {
   // For placeholder images, use a simple div instead of loading the placeholder
-  if (src.includes("placeholder.svg")) {
+  if (src && src.includes("placeholder.svg")) {
     return (
       <div
         style={{
@@ -21,6 +21,8 @@ export function OptimizedImage({ src, alt, width, height, ...props }) {
     )
   }
 
-  return <Image src={src || "/placeholder.svg"} alt={alt} width={width} height={height} {...props} />
+  return (
+    <Image src={src || "/placeholder.svg"} alt={alt || ""} width={width || 500} height={height || 300} {...props} />
+  )
 }
 

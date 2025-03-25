@@ -1,0 +1,25 @@
+# Route Group Optimization
+
+To further optimize your bundle size, consider organizing your app into route groups:
+
+1. Create a folder structure like this:
+   - app/(marketing)/page.tsx (homepage)
+   - app/(marketing)/about/page.tsx
+   - app/(marketing)/services/page.tsx
+   - app/(marketing)/portfolio/page.tsx
+   - app/(marketing)/blog/page.tsx
+   - app/(marketing)/layout.tsx (shared layout for marketing pages)
+   
+   - app/(app)/contact/page.tsx (client component with form)
+   - app/(app)/layout.tsx (minimal layout for app pages)
+
+2. This helps Next.js optimize the bundle by:
+   - Grouping related pages together
+   - Allowing different layouts for different sections
+   - Reducing the amount of JavaScript loaded for each route
+
+3. To implement this:
+   - Create the folders
+   - Move your existing pages into these folders
+   - Create separate layouts for each group
+

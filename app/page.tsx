@@ -3,16 +3,9 @@ import Image from "next/image"
 import { ArrowRight, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import dynamic from "next/dynamic"
 
-// Instead of:
-// import ContactPage from './contact/page'
-
-// Use:
-const ContactPage = dynamic(() => import("./contact/page"), {
-  loading: () => <p>Loading...</p>,
-  ssr: false, // If you don't need server-side rendering
-})
+// Remove the dynamic import that was causing the error
+// We don't actually need to import the contact page here
 
 export default function Home() {
   return (
