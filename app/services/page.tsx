@@ -1,58 +1,36 @@
 import Link from "next/link"
-import Image from "next/image"
-import { CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Placeholder } from "@/components/placeholder"
+import { CheckCircle } from "lucide-react"
 
 export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-primary/5">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Services</h1>
-              <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                Comprehensive social media solutions tailored to your business needs.
-              </p>
-            </div>
-          </div>
+        <div className="container text-center">
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-4">Our Services</h1>
+          <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl">
+            Comprehensive social media solutions tailored to your business needs.
+          </p>
         </div>
       </section>
-
       {/* Social Media Management */}
       <section id="management" className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter">Social Media Management</h2>
-                <p className="text-muted-foreground">
-                  We handle your social media presence across all platforms, so you can focus on running your business.
-                </p>
-              </div>
+        <div className="container">
+          <div className="grid gap-6 lg:grid-cols-2 items-center">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold">Social Media Management</h2>
+              <p className="text-muted-foreground">
+                We handle your social media presence across all platforms, so you can focus on running your business.
+              </p>
               <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Platform setup and optimization</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Content calendar development</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Regular posting and scheduling</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Community engagement and moderation</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="mr-2 h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Monthly performance reports</span>
-                </li>
+                <li>✓ Platform setup and optimization</li>
+                <li>✓ Content calendar development</li>
+                <li>✓ Regular posting and scheduling</li>
+                <li>✓ Community engagement and moderation</li>
+                <li>✓ Monthly performance reports</li>
               </ul>
               <div>
                 <Link href="/contact">
@@ -61,19 +39,13 @@ export default function ServicesPage() {
               </div>
             </div>
             <div className="flex justify-center">
-              <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="Social Media Management"
-                width={600}
-                height={400}
-                className="rounded-lg object-cover"
-              />
+              <Placeholder width={600} height={400} text="Social Media Management" />
             </div>
           </div>
         </div>
       </section>
-
       {/* Content Creation */}
+      {/*
       <section id="content" className="w-full py-12 md:py-24 lg:py-32 bg-primary/5">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
@@ -126,6 +98,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Paid Advertising */}
+      /*
       <section id="advertising" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
@@ -176,8 +149,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Analytics & Reporting */}
+      /*
       <section id="analytics" className="w-full py-12 md:py-24 lg:py-32 bg-primary/5">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
@@ -228,8 +201,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
+      /*
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -376,27 +349,21 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
+      */
       {/* CTA Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                Ready to Transform Your Social Media Presence?
-              </h2>
-              <p className="max-w-[700px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Let's discuss how our services can help you achieve your business goals.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link href="/contact">
-                <Button size="lg" variant="secondary" className="w-full min-[400px]:w-auto">
-                  Schedule a Free Consultation
-                </Button>
-              </Link>
-            </div>
-          </div>
+        <div className="container text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mb-4">
+            Ready to Transform Your Social Media Presence?
+          </h2>
+          <p className="max-w-[700px] mx-auto mb-6">
+            Let's discuss how our services can help you achieve your business goals.
+          </p>
+          <Link href="/contact">
+            <Button size="lg" variant="secondary">
+              Schedule a Free Consultation
+            </Button>
+          </Link>
         </div>
       </section>
     </>

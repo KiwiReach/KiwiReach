@@ -1,4 +1,3 @@
-// Create an ultra-lightweight placeholder component
 export function Placeholder({
   width,
   height,
