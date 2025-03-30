@@ -4,11 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Remove the complex webpack configuration that's causing issues
-  // Let Next.js handle the file splitting naturally
-  distDir: 'out', // Explicitly set the output directory
+  // Remove distDir as it conflicts with output: 'export'
+  // When using output: 'export', Next.js will automatically create the "out" directory
   trailingSlash: true, // Add trailing slashes to URLs for better static hosting compatibility
-  // Keep these optimizations
   swcMinify: true,
   compiler: {
     removeConsole: true,
