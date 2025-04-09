@@ -22,4 +22,3 @@ To further optimize your bundle size, consider organizing your app into route gr
    - Create the folders
    - Move your existing pages into these folders
    - Create separate layouts for each group
-

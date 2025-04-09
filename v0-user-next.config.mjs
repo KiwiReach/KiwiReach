@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  distDir: '.next',
   images: {
     unoptimized: true,
   },
-  // Remove distDir as it conflicts with output: 'export'
-  // When using output: 'export', Next.js will automatically create the "out" directory
-  trailingSlash: true, // Add trailing slashes to URLs for better static hosting compatibility
+  trailingSlash: true,
   swcMinify: true,
   compiler: {
     removeConsole: true,
@@ -14,4 +13,3 @@ const nextConfig = {
 }
 
 export default nextConfig
-

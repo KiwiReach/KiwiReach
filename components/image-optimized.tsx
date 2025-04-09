@@ -25,4 +25,3 @@ export function OptimizedImage({ src, alt, width, height, ...props }: any) {
     <Image src={src || "/placeholder.svg"} alt={alt || ""} width={width || 500} height={height || 300} {...props} />
   )
 }
-

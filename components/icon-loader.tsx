@@ -30,4 +30,3 @@ export function IconLoader({ name, ...props }: { name: string } & LucideProps) {
 
   return <Icon {...props} />
 }
-

@@ -10,4 +10,3 @@ export const Icon = ({ name, ...props }: { name: string } & LucideProps) => {
   const LucideIcon = importIcon(name)
   return <LucideIcon {...props} />
 }
-
