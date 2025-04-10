@@ -10,8 +10,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-primary">
-          Kiwi Reach
+        <Link href="/" className="text-2xl font-bold text-gray-600" style={{ letterSpacing: "-0.05em" }}>
+          KiwiReach
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
