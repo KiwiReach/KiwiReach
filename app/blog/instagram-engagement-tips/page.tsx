@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowLeft, Share2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -28,13 +27,9 @@ export default function BlogPostPage() {
           </div>
         </div>
 
-        <Image
-          src="/placeholder.svg?height=500&width=1000"
-          alt="Instagram Engagement"
-          width={1000}
-          height={500}
-          className="rounded-lg object-cover w-full"
-        />
+        <div className="rounded-lg bg-gray-200 h-[500px] w-full flex items-center justify-center">
+          Instagram Engagement Image
+        </div>
 
         <div className="prose prose-lg max-w-none">
           <p>
@@ -169,7 +164,7 @@ export default function BlogPostPage() {
           <div>
             <h3 className="text-lg font-bold">Share this article</h3>
             <div className="flex space-x-2 mt-2">
-              <Button variant="outline" size="icon">
+              <Button variant="outline" size="sm" className="h-8 w-8 p-0">
                 <Share2 className="h-4 w-4" />
                 <span className="sr-only">Share</span>
               </Button>
