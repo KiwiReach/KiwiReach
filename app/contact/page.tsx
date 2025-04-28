@@ -12,21 +12,46 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState("")
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError("")
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Using FormSubmit.co service which doesn't require backend code
+      const response = await fetch(`https://formsubmit.co/ajax/kiwireachnz@gmail.com`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: "New Contact Form Submission - KiwiReach",
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form")
+      }
+
       setSubmitted(true)
+      setFormData({ name: "", email: "", message: "" })
+    } catch (err) {
+      setError("There was a problem sending your message. Please try again or email us directly.")
+      console.error("Form submission error:", err)
+    } finally {
       setIsSubmitting(false)
-    }, 1000)
+    }
   }
 
   return (
@@ -98,6 +123,7 @@ export default function ContactPage() {
                         className="w-full p-2 border rounded min-h-[120px]"
                       />
                     </div>
+                    {error && <p className="text-red-500">{error}</p>}
                     <Button type="submit" className="w-full" disabled={isSubmitting}>
                       {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
