@@ -34,8 +34,14 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center">
-              <Placeholder width={500} height={500} text="Social Media Marketing" />
-            </div>
+             <img 
+              src="/images/test-imagev0.png" 
+              alt="Social Media Marketing" 
+              width={500} 
+              height={500}
+              className="rounded-lg object-cover" 
+             />
+           </div>
           </div>
         </div>
       </section>
